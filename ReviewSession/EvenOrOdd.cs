@@ -10,14 +10,21 @@ namespace ReviewSession
     {
         public void Check()
         {
-            Console.WriteLine("Enter the number which you want to check");
-            int num = Convert.ToInt32(Console.ReadLine());
-            if (num % 2 == 0)
+            Console.WriteLine("Enter the number to check whether its odd or even");
+            try
             {
-                Console.WriteLine("Given Number is an even number");
+                int num = Convert.ToInt32(Console.ReadLine());
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine("Given Number is an even number");
+                }
+                else
+                    Console.WriteLine("Given Number is odd Number");
             }
-            else
-                Console.WriteLine("Given Number is odd Number");
+           catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

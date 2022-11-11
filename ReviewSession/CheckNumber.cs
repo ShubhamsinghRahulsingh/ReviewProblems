@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 namespace ReviewSession
 {
     public class CheckNumber
-    { 
-            public void Number()
+    {
+        public void Number()
+        {
+            Console.WriteLine("Enter the Number");
+            try
             {
-                Console.WriteLine("Enter the Number");
                 int number = Convert.ToInt32(Console.ReadLine());
                 if (number > 0)
                 {
@@ -23,5 +25,10 @@ namespace ReviewSession
                 else
                     Console.WriteLine("The number is zero");
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
