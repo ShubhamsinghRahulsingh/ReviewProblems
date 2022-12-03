@@ -1,6 +1,6 @@
-﻿using ReviewSession;
-using System;
-namespace Practice1
+﻿using System;
+using ReviewSession;
+namespace ReviewSession
 {
     class Program
     {
@@ -10,10 +10,12 @@ namespace Practice1
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nSelect From the below options");
-                Console.WriteLine("1.EvenOrOdd\n2.PositveNegativeOrZero\n3.Alphabets\n4.MultiplicationTable\n5.Factorial\n6.Palindrome\n7.Power\n8.ASCIIValues\n9.Exit");
-                int select = Convert.ToInt32(Console.ReadLine());
-                switch (select)
+                Console.WriteLine("________________________________________________________\n");
+                Console.WriteLine("Select From the below options");
+                Console.WriteLine("1.EvenOrOdd\n2.PositveNegativeOrZero\n3.Alphabets\n4.MultiplicationTable\n5.Factorial\n6.Palindrome\n7.Power\n8.ASCIIValues\n9.AreaOfCircle\n10.Exit");
+                Console.Write("Enter your choice: ");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
                 {
                     case 1:
                         EvenOrOdd check = new EvenOrOdd();
@@ -48,6 +50,10 @@ namespace Practice1
                         print.PrintASCII();
                         break;
                     case 9:
+                        AreaOfCircle area=new AreaOfCircle();
+                        area.Area();
+                        break;
+                    case 10:
                         flag = false;
                         break;
                 }

@@ -10,11 +10,11 @@ namespace ReviewSession
     {
         public void FindPower()
         {
-            Console.WriteLine("Enter the number to find its power");
+            Console.Write("Enter the number to find its power: ");
             try
             {
                 int num = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter the number upto which you want power");
+                Console.Write("Enter the number upto which you want power: ");
                 int pow = Convert.ToInt32(Console.ReadLine());
                 for (int i = 0; i < pow; i++)
                 {
