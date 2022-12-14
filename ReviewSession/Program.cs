@@ -12,7 +12,7 @@ namespace ReviewSession
             {
                 Console.WriteLine("________________________________________________________\n");
                 Console.WriteLine("Select From the below options");
-                Console.WriteLine("1.EvenOrOdd\n2.PositveNegativeOrZero\n3.Alphabets\n4.MultiplicationTable\n5.Factorial\n6.Palindrome\n7.Power\n8.ASCIIValues\n9.AreaOfCircle\n10.Exit");
+                Console.WriteLine("1.EvenOrOdd\n2.PositveNegativeOrZero\n3.Alphabets\n4.MultiplicationTable\n5.Factorial\n6.Palindrome\n7.Power\n8.ASCIIValues\n9.AreaOfCircle\n10.FindSecondLargestElementInArray\n11.MaxingNumberUsingSwitchCase\n12.MergeTwoSortedArrays\n13.Exit");
                 Console.Write("Enter your choice: ");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -54,6 +54,18 @@ namespace ReviewSession
                         area.Area();
                         break;
                     case 10:
+                        FindSecondLargestInArray find = new FindSecondLargestInArray();
+                        find.FindSecondLargest();
+                        break;
+                    case 11:
+                        MaxUsingSwitch max = new MaxUsingSwitch();
+                        max.FindWithSwitch(25, 50);
+                        break;
+                    case 12:
+                        MergeTwoSortedArrays merge = new MergeTwoSortedArrays();
+                        merge.MergeSortedArrays();
+                        break;
+                    case 13:
                         flag = false;
                         break;
                 }
